@@ -3,8 +3,12 @@ terraform {
   required_providers {
     //https://registry.terraform.io/providers/hashicorp/aws/latest/docs
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "~> 5.0"
     }
   }
+}
+provider "aws" {
+  region  = "us-east-1"
+  profile = "default"
 }
